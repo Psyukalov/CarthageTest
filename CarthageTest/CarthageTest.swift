@@ -9,6 +9,10 @@
 import Foundation
 
 open class MyTestClass {
+    public init() {
+        
+    }
+    
     open func printSomething(_ something: String? = nil) {
         print(something ?? "Empty string")
     }
