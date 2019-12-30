@@ -9,7 +9,7 @@
 import Foundation
 
 public class MyTestClass {
-    public func printSomething(_ something: String? = nil) {
+    open func printSomething(_ something: String? = nil) {
         print(something ?? "Empty string")
     }
 }
