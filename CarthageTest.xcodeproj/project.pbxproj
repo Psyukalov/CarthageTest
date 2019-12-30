@@ -9,13 +9,30 @@
 /* Begin PBXBuildFile section */
 		C79BAAF123B9DCF5001C447B /* CarthageTest.h in Headers */ = {isa = PBXBuildFile; fileRef = C79BAAEF23B9DCF5001C447B /* CarthageTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C79BAAF823B9DE3C001C447B /* CarthageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79BAAF723B9DE3C001C447B /* CarthageTest.swift */; };
+		C79BAB2623BA07EF001C447B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79BAB2523BA07EF001C447B /* Alamofire.framework */; };
+		C79BAB2723BA07EF001C447B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C79BAB2523BA07EF001C447B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C79BAB2823BA07EF001C447B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C79BAB2723BA07EF001C447B /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C79BAAEC23B9DCF5001C447B /* CarthageTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CarthageTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79BAAEF23B9DCF5001C447B /* CarthageTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarthageTest.h; sourceTree = "<group>"; };
 		C79BAAF023B9DCF5001C447B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C79BAAF723B9DE3C001C447B /* CarthageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarthageTest.swift; sourceTree = "<group>"; };
+		C79BAB2523BA07EF001C447B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79BAB2623BA07EF001C447B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +52,7 @@
 			children = (
 				C79BAAEE23B9DCF5001C447B /* CarthageTest */,
 				C79BAAED23B9DCF5001C447B /* Products */,
+				C79BAB2423BA07EF001C447B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +72,14 @@
 				C79BAAF723B9DE3C001C447B /* CarthageTest.swift */,
 			);
 			path = CarthageTest;
+			sourceTree = "<group>";
+		};
+		C79BAB2423BA07EF001C447B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C79BAB2523BA07EF001C447B /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +105,7 @@
 				C79BAAE923B9DCF5001C447B /* Frameworks */,
 				C79BAAEA23B9DCF5001C447B /* Resources */,
 				C79BAB2323BA056B001C447B /* ShellScript */,
+				C79BAB2823BA07EF001C447B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,6 +322,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CarthageTest/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -322,6 +354,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CarthageTest/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
