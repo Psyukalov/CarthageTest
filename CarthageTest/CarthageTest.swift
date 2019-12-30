@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class MyTestClass {
+open class MyTestClass {
     open func printSomething(_ something: String? = nil) {
         print(something ?? "Empty string")
     }
